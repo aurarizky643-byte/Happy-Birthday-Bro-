@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Bro!!</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-glitter"></div>
+
+  <div class="cake">
+    <div class="tier tier1"></div>
+    <div class="tier tier2"></div>
+    <div class="tier tier3"></div>
+    <div class="candle">
+      <div class="flame"></div>
+    </div>
+  </div>
+
+  <!--  Teks utama di bawah kue -->
+  <div class="main-text">Happy Birthday Bro!!</div>
+
+  <div class="balloons"></div>
+
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_5527a6e7ab.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    // Balon acak
+    const balloonContainer = document.querySelector('.balloons');
+    for (let i = 0; i < 25; i++) {
+      const b = document.createElement('div');
+      b.classList.add('balloon');
+      b.style.left = Math.random() * 100 + '%';
+      b.style.animationDelay = Math.random() * 6 + 's';
+      balloonContainer.appendChild(b);
+    }
+  </script>
+</body>
+</html>
